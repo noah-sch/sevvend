@@ -5,9 +5,6 @@ export default function Navbar() {
 
                 {/* logo */}
                 <div className="col-span-1 flex flex-row justify-start items-center pl-10">
-                    <div>
-
-                    </div>
                     <span className="text-4xl text-white font-semibold">
                         sevvend
                     </span>

@@ -1,5 +1,6 @@
 import BGNoise from "./components/layout/BGNoise";
 import Navbar from "./components/layout/Navbar";
+import TopBlurOverlay from "./components/layout/TopBlurOverlay";
 
 // Pages
 import Home from "./pages/Home";
@@ -13,8 +14,9 @@ function App() {
                     { backgroundColor: "rgb(23,23,23)" }
                 }
             >
-                <BGNoise opacity={0.5} grainSize={1}>
+                <BGNoise opacity={0.5} grainSize={1} >
                     <div className="h-full w-full">
+                        <TopBlurOverlay/>
                         <Navbar/>
                         <Home/>
                     </div>

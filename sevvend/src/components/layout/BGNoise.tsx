@@ -11,6 +11,7 @@ type BGNoiseProps = {
 export default function BGNoise( {children, opacity, grainSize}: BGNoiseProps ) {
 
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
+    const rafRef = useRef<number | null>(null);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -21,13 +22,11 @@ export default function BGNoise( {children, opacity, grainSize}: BGNoiseProps ) 
 
         const resize = () => {
             const rect = canvas.getBoundingClientRect();
-
             if (rect.width === 0 || rect.height === 0) return;
 
-            canvas.width = rect.width;
-            canvas.height = rect.height;
-
-            generateNoise();
+            // Réduire la résolution interne selon grainSize, le CSS s'occupe du scaling
+            canvas.width = Math.ceil(rect.width / grainSize);
+            canvas.height = Math.ceil(rect.height / grainSize);
         };
 
         const generateNoise = () => {
@@ -38,7 +37,6 @@ export default function BGNoise( {children, opacity, grainSize}: BGNoiseProps ) 
 
             for (let i = 0; i < data.length; i += 4) {
                 const random = Math.random() * 255;
-
                 data[i] = random;
                 data[i + 1] = random;
                 data[i + 2] = random;
@@ -48,11 +46,18 @@ export default function BGNoise( {children, opacity, grainSize}: BGNoiseProps ) 
             ctx.putImageData(imageData, 0, 0);
         };
 
+        const loop = () => {
+            generateNoise();
+            rafRef.current = requestAnimationFrame(loop);
+        };
+
         resize();
         window.addEventListener("resize", resize);
+        loop();
 
         return () => {
             window.removeEventListener("resize", resize);
+            if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
         };
     }, [opacity, grainSize])
 
@@ -60,14 +65,12 @@ export default function BGNoise( {children, opacity, grainSize}: BGNoiseProps ) 
         <>
             <div className="relative w-full h-full">
                 <canvas ref={canvasRef}
-                    className="absolute inset-0 w-full h-full pointer-events-none z-10"
-                    style={
-                        { imageRendering: grainSize > 1 ? "pixelated" : "auto" }
-                    }
+                    className="absolute inset-0 w-full h-full pointer-events-none z-40 opacity-10"
+                    style={{ imageRendering: grainSize > 1 ? "pixelated" : "auto" }}
                 />
 
                 {/* children */}
-                <div className="relative w-full h-full z-10"> {/* possible pb de z-index ? */}
+                <div className="relative w-full h-full z-10">
                     {children}
                 </div>
             </div>

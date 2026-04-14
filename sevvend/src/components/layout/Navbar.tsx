@@ -1,8 +1,21 @@
+import { useState } from "react";
+
 import WordHoverEffect from "../section/WordHoverEffect";
+import Menu from "../Menu";
 
 export default function Navbar() {
+
+    const [showMenu, setShowMenu] = useState<boolean>(false);
+
     return(
         <>
+            {showMenu && (
+                <>
+                    <div className="fixed inset-0 z-40" onClick={() => setShowMenu(false)} />
+                    <Menu />
+                </>
+            )}
+
             <div className="fixed top-0 left-0 w-full grid grid-cols-2 z-40 mix-blend-difference pt-6">
 
                 {/* logo */}
@@ -14,7 +27,9 @@ export default function Navbar() {
 
                 {/* menu */}
                 <div className="col-span-1 flex flex-row justify-start items-end">
-                    <div className="flex flex-row justify-start items-center group cursor-pointer">
+                    <div className="relative flex flex-row justify-start items-center group cursor-pointer overflow-visible"
+                        onClick={() => setShowMenu(prev => !prev)}
+                    >
                         <span className="text-white transition-transform duration-300 group-hover:rotate-45">
                             <svg width="auto" height="16" viewBox="0 0 24 24" fill="none">
                                 <path
@@ -25,12 +40,13 @@ export default function Navbar() {
                                 />
                             </svg>
                         </span>
-                        <span className="text-white -translate-x-0.75 -translate-y-px">
+                        <span className="text-white -translate-x-0.75 -translate-y-px text-sm font-semibold">
                             <WordHoverEffect word={"MENU"} />
                         </span>
                     </div>
                 </div>
             </div>
+
         </>
     )
 }

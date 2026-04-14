@@ -1,5 +1,4 @@
 import BGNoise from "./components/layout/BGNoise";
-import GridOverlay from "./components/layout/GridOverlay";
 import Navbar from "./components/layout/Navbar";
 
 // Pages

@@ -18,8 +18,8 @@ export default function GridOverlay( {children}: GridOverlayProps ) {
                         to right,
                         transparent,
                         transparent calc(25% - 1px),
-                        rgb(38 38 38) calc(25% - 1px),
-                        rgb(38 38 38) 25%
+                        rgba(115, 115, 115, 0.2) calc(25% - 1px),
+                        rgba(115, 115, 115, 0.2) 25%
                         )
                     `,
                     }}

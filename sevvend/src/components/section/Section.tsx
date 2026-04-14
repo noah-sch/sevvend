@@ -27,10 +27,11 @@ export default function Section( {children, theme, topMarkers}: SectionProps ) {
         <>
             <div className={`w-full ${bgThemeClass}`}>
                 <BGNoise opacity={0.05} grainSize={1}>
-                    <div className="px-10">
-                        <GridOverlay>
+                    <div className="relative w-full px-10">
+                        <div className="absolute left-0 top-6 -translate-y-px w-full border-t border-t-neutral-500/20"/>
+                        <GridOverlay> 
                             <div className="pt-6">
-                                <div className="relative border-t border-t-neutral-500/20">
+                                <div className="relative ">
                                     {topMarkers && markPos.map((pos) => (
                                         <Marker pos={pos} theme={theme} />
                                     ))}

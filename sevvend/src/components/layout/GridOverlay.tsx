@@ -7,7 +7,7 @@ type GridOverlayProps = {
 export default function GridOverlay( {children}: GridOverlayProps ) {
     return(
         <>
-            <div className="relative h-full w-full overflow-hidden z-10 border-x border-x-neutral-800">
+            <div className="relative h-full w-full z-10 border-l border-l-neutral-500/20">
 
                 {/* GRID */}
                 <div

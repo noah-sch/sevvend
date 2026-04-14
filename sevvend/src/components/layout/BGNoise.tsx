@@ -58,7 +58,7 @@ export default function BGNoise( {children, opacity, grainSize}: BGNoiseProps ) 
 
     return(
         <>
-            <div className="relative w-full h-full overflow-hidden">
+            <div className="relative w-full h-full">
                 <canvas ref={canvasRef}
                     className="absolute inset-0 w-full h-full pointer-events-none z-0"
                     style={

@@ -17,7 +17,7 @@ export default function Marker( {pos, theme}: MarkerProps) {
         <>
             <div
                 key={pos}
-                className={`absolute top-0 -translate-y-1/2 -translate-x-1/2 z-30 text-xs font-light select-none pointer-events-none flex items-center justify-center w-4 h-4 ${markThemeClass}`}
+                className={`absolute top-0 -translate-y-[calc(50%+2.5px)] -translate-x-[calc(50%+0.5px)] text-xl z-30 font-light select-none pointer-events-none flex items-center justify-center w-4 h-4 ${markThemeClass}`}
                 style={{ left: pos }}
             >
                 +

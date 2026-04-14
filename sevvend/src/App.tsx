@@ -9,17 +9,15 @@ function App() {
 
     return (
         <>
-            <div className="min-h-screen w-screen overflow-auto"
+            <div className="min-h-screen w-full overflow-auto"
                 style={
                     { backgroundColor: "rgb(23,23,23)" }
                 }
             >
-                <BGNoise opacity={0.05} grainSize={1}>
-                    <div className="h-full w-full px-8">
+                <BGNoise opacity={0.5} grainSize={1}>
+                    <div className="h-full w-full">
                         <Navbar/>
-                        <GridOverlay>
-                            <Home/>
-                        </GridOverlay>
+                        <Home/>
                     </div>
                 </BGNoise>
             </div>

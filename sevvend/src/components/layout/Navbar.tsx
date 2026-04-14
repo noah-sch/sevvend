@@ -1,10 +1,10 @@
 export default function Navbar() {
     return(
         <>
-            <div className="fixed top-0 left-0 w-full grid grid-cols-2 z-40 mix-blend-difference backdrop-blur-xl ">
+            <div className="fixed top-0 left-0 w-full grid grid-cols-2 z-40 mix-blend-difference backdrop-blur-xl pt-6">
 
                 {/* logo */}
-                <div className="col-span-1 flex flex-row justify-start items-center pl-8 pt-4">
+                <div className="col-span-1 flex flex-row justify-start items-center pl-10">
                     <div>
 
                     </div>

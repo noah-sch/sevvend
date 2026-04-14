@@ -1,10 +1,9 @@
 import Section from "../../components/section/Section";
 
-
-export default function Hero() {
+export default function Test() {
     return(
         <>
-            <Section theme={"halflight"} topMarkers={false}>
+            <Section theme={"dark"} topMarkers={true}>
                 <>
                     <div className="w-full min-h-screen flex items-center justify-center">
                         sevvend

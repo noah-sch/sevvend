@@ -11,8 +11,8 @@ export default function TopBlurOverlay({ height = 64 }: TopBlurOverlayProps) {
       <div
         className="w-full h-full backdrop-blur-xs backdrop"
         style={{
-            maskImage: "linear-gradient(to bottom, black 0% transparent 100%)",
-            WebkitMaskImage: "linear-gradient(to bottom, black 0% transparent 100%)", 
+            maskImage: "linear-gradient(to bottom, black 0%, rgba(0,0,0,0.9) 60%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to bottom, black 0%, rgba(0,0,0,0.9) 60%, transparent 100%)",
         }}
       />
     </div>

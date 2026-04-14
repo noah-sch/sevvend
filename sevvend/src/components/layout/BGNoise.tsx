@@ -65,7 +65,7 @@ export default function BGNoise( {children, opacity, grainSize}: BGNoiseProps ) 
         <>
             <div className="relative w-full h-full">
                 <canvas ref={canvasRef}
-                    className="absolute inset-0 w-full h-full pointer-events-none z-40 opacity-10"
+                    className="absolute inset-0 w-full h-full pointer-events-none z-40 opacity-7"
                     style={{ imageRendering: grainSize > 1 ? "pixelated" : "auto" }}
                 />
 

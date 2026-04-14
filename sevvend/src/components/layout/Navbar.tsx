@@ -1,10 +1,12 @@
+import WordHoverEffect from "../section/WordHoverEffect";
+
 export default function Navbar() {
     return(
         <>
             <div className="fixed top-0 left-0 w-full grid grid-cols-2 z-40 mix-blend-difference pt-6">
 
                 {/* logo */}
-                <div className="col-span-1 flex flex-row justify-start items-center pl-10">
+                <div className="col-span-1 flex flex-row justify-start items-center pl-10 cursor-pointer">
                     <span className="text-4xl text-white font-semibold">
                         sevvend
                     </span>
@@ -12,12 +14,21 @@ export default function Navbar() {
 
                 {/* menu */}
                 <div className="col-span-1 flex flex-row justify-start items-end">
-                    <span className="text-white text-2xl leading-none">
-                        ×
-                    </span>
-                    <span className="text-white">
-                        MENU
-                    </span>
+                    <div className="flex flex-row justify-start items-center group cursor-pointer">
+                        <span className="text-white transition-transform duration-300 group-hover:rotate-45">
+                            <svg width="auto" height="16" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M12 5v14M5 12h14"
+                                    stroke="currentColor"
+                                    strokeWidth="2.5"
+                                    strokeLinecap="round"
+                                />
+                            </svg>
+                        </span>
+                        <span className="text-white -translate-x-0.75 -translate-y-px">
+                            <WordHoverEffect word={"MENU"} />
+                        </span>
+                    </div>
                 </div>
             </div>
         </>

@@ -4,20 +4,18 @@ export default function GitHubTicket()  {
             <a
                 href="https://github.com/noah-sch/sevvend"
                 target="_blank"
-                className="flex flex-row justify-start items-center gap-2 hover:opacity-70 z-50 group"
+                className="flex flex-row justify-start items-center gap-2 hover:opacity-70 z-50 translate-x-2 group cursor-pointer"
             >
-                <div className="flex flex-col items-end justify-center">
-                    <span className="inline-block whitespace-nowrap leading-none">
-                        Github
+                <div className="flex flex-col items-end justify-center gap-1 transition-transform duration-300 group-hover:translate-x-1 ">
+                    <span className="inline-block whitespace-nowrap leading-none text-neutral-500 text-xs font-medium">
+                        GITHUB
                     </span>
-                    <span>
-                        <code className="inline-block whitespace-nowrap leading-none">
-                            noah-sch/sevvend
-                        </code>
+                    <span className="inline-block whitespace-nowrap leading-none text-xs font-medium">
+                        NOAH-SCH/SEVVEND
                     </span>
                 </div>
                 <div className="flex flex-row">
-                    <svg width="auto" height="48" viewBox="0 0 24 24" fill="none" className="z-50">
+                    <svg width="auto" height="48" viewBox="0 0 24 24" fill="none" className="z-50 transition-transform duration-300 group-hover:translate-x-1">
                         {/* cercle */}
                         <circle cx="12" cy="12" r="12" fill="white" />
 
@@ -29,7 +27,7 @@ export default function GitHubTicket()  {
                             />
                         </g>
                     </svg>
-                    <svg width="auto" height="48" viewBox="0 0 64 64" fill="none" className="-translate-x-2 z-39 transition-transform duration-300 group-hover:rotate-45">
+                    <svg width="auto" height="48" viewBox="0 0 64 64" fill="none" className="-translate-x-2 z-39 transition-transform duration-300 group-hover:rotate-90">
                         {/* cercle noir */}
                         <circle cx="32" cy="32" r="32" fill="black" />
 
@@ -37,7 +35,7 @@ export default function GitHubTicket()  {
                         <path
                             d="M32 14 V50 M14 32 H50"
                             stroke="white"
-                            strokeWidth="2"
+                            strokeWidth="1.5"
                             strokeLinecap="round"
                         />
                     </svg>

@@ -34,13 +34,9 @@ export default function Hero() {
             <div className="relative h-full w-full">
                 <Section theme={"halflight"} topMarkers={false}>
                     <div className="w-full h-[120vh] grid grid-cols-2 z-20">
-
-                        {/* Relative */}
                         <div className="relative col-start-2 w-full h-full grid grid-cols-2">
                             <div className="col-start-2 w-full h-full flex flex-col items-center justify-start z-50 pt-4">
-                                <div className="w-full flex flex-row items-center justify-end">
-                                    <GitHubTicket />
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -52,7 +48,7 @@ export default function Hero() {
                 </div>
 
                 {/* Absolute */}
-                <div className="absolute top-0 left-0 w-full h-screen z-20 mix-blend-difference px-10 pointer-events-none">
+                <div className="absolute top-0 left-0 w-full h-screen z-20 mix-blend-difference px-10 ">
                     <div className="w-full h-full flex flex-col items-center justify-center">
                         <h1 ref={titleRef} className="font-bold text-white whitespace-nowrap leading-none">
                             WTF IS THIS ABOUT?
@@ -62,6 +58,17 @@ export default function Hero() {
                                 <h2 className="text-5xl font-bold text-white z-40">
                                     SOME FEATURED PROJECTS
                                 </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {/* Absolute */}
+                <div className="absolute top-0 left-0 w-full h-[120vh] grid grid-cols-2 z-40 px-10 pt-4 pointer-events-none">
+                    <div className="relative col-start-2 w-full h-full grid grid-cols-2">
+                        <div className="col-start-2 w-full h-full flex flex-col items-center justify-start z-50 pt-4">
+                            <div className="w-full flex flex-row items-center justify-end pointer-events-auto">
+                                <GitHubTicket />
                             </div>
                         </div>
                     </div>

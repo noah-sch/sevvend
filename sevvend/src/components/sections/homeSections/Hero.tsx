@@ -1,5 +1,7 @@
 import { useRef, useEffect } from "react";
+
 import Section from "../Section";
+import GitHubTicket from "../../ui/GitHubTicket";
 
 export default function Hero() {
     const titleRef = useRef<HTMLHeadingElement>(null);
@@ -35,20 +37,22 @@ export default function Hero() {
 
                         {/* Relative */}
                         <div className="relative col-start-2 w-full h-full grid grid-cols-2">
-                            <div className="col-start-2 w-full h-full flex flex-col items-center justify-start">
-                                test
+                            <div className="col-start-2 w-full h-full flex flex-col items-center justify-start z-50 pt-4">
+                                <div className="w-full flex flex-row items-center justify-end">
+                                    <GitHubTicket />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </Section>
                 
                 {/* Absolute */}
-                <div className="absolute left-0 top-0 h-full w-8/19 z-10">
+                <div className="absolute left-0 top-0 h-full w-8/19 z-10 pointer-events-none">
                     <img src="../../medias/shivansh-sharma-ZQPZIAz-2co-unsplash.jpg" className="h-full w-full object-cover opacity-95" />
                 </div>
 
                 {/* Absolute */}
-                <div className="absolute top-0 left-0 w-full h-screen z-30 mix-blend-difference px-10">
+                <div className="absolute top-0 left-0 w-full h-screen z-20 mix-blend-difference px-10 pointer-events-none">
                     <div className="w-full h-full flex flex-col items-center justify-center">
                         <h1 ref={titleRef} className="font-bold text-white whitespace-nowrap leading-none">
                             WTF IS THIS ABOUT?

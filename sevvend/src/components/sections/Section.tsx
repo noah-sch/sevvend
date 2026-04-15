@@ -2,7 +2,7 @@ import React from "react";
 
 import type { sectionTheme } from "../../types/sectionThemeType";
 
-import Marker from "./Marker";
+import Marker from "../ui/Marker";
 import GridOverlay from "../layout/GridOverlay";
 import BGNoise from "../layout/BGNoise";
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import WordHoverEffect from "../section/WordHoverEffect";
+import WordHoverEffect from "../ui/WordHoverEffect";
 import Menu from "../Menu";
 
 export default function Navbar() {

@@ -1,5 +1,5 @@
-import Hero from "../sections/homeSections/Hero";
-import Test from "../sections/homeSections/Test";
+import Hero from "../components/sections/homeSections/Hero";
+import Test from "../components/sections/homeSections/Test";
 
 export default function Home() {
     return(

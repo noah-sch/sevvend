@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import Section from "../../components/section/Section";
+import Section from "../Section";
 
 export default function Hero() {
     const titleRef = useRef<HTMLHeadingElement>(null);
@@ -28,23 +28,39 @@ export default function Hero() {
 
     return(
         <>
+            {/* Relative */}
             <div className="relative h-full w-full">
                 <Section theme={"halflight"} topMarkers={false}>
-                    <div className="relative w-full h-[120vh] grid grid-cols-2 z-20">
-                        <div className="col-start-2">
-                            {/* texte, etc. */}
+                    <div className="w-full h-[120vh] grid grid-cols-2 z-20">
+
+                        {/* Relative */}
+                        <div className="relative col-start-2 w-full h-full grid grid-cols-2">
+                            <div className="col-start-2 w-full h-full flex flex-col items-center justify-start">
+                                wsh
+                            </div>
                         </div>
                     </div>
                 </Section>
-
+                
+                {/* Absolute */}
                 <div className="absolute left-0 top-0 h-full w-8/19 z-10">
                     <img src="../../medias/shivansh-sharma-ZQPZIAz-2co-unsplash.jpg" className="h-full w-full object-cover opacity-95" />
                 </div>
 
-                <div className="absolute top-0 left-0 w-full h-screen flex items-center justify-center z-30 mix-blend-difference px-10">
-                    <h1 ref={titleRef} className="font-bold text-white whitespace-nowrap">
-                        WTF IS THIS ABOUT?
-                    </h1>
+                {/* Absolute */}
+                <div className="absolute top-0 left-0 w-full h-screen z-30 mix-blend-difference px-10">
+                    <div className="w-full h-full flex flex-col items-center justify-center">
+                        <h1 ref={titleRef} className="font-bold text-white whitespace-nowrap leading-none">
+                            WTF IS THIS ABOUT?
+                        </h1>
+                        <div className="grid grid-cols-2">
+                            <div className="col-span-1 col-start-2">
+                                <h2 className="text-5xl font-bold text-white z-40">
+                                    SOME FEATURED PROJECTS
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

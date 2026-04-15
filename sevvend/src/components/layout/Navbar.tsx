@@ -19,8 +19,8 @@ export default function Navbar() {
             <div className="fixed top-0 left-0 w-full grid grid-cols-2 z-40 mix-blend-difference pt-6">
 
                 {/* logo */}
-                <div className="col-span-1 flex flex-row justify-start items-center pl-10 cursor-pointer">
-                    <span className="text-4xl text-white font-semibold">
+                <div className="col-span-1 flex flex-row justify-start items-center pl-10">
+                    <span className="text-4xl text-white font-semibold cursor-pointer">
                         sevvend
                     </span>
                 </div>

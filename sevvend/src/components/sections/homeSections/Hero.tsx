@@ -36,7 +36,7 @@ export default function Hero() {
                         {/* Relative */}
                         <div className="relative col-start-2 w-full h-full grid grid-cols-2">
                             <div className="col-start-2 w-full h-full flex flex-col items-center justify-start">
-                                wsh
+                                test
                             </div>
                         </div>
                     </div>
